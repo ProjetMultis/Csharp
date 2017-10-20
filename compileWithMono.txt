@@ -1,0 +1,22 @@
+Installer mono d'abord pour compiler un fichier c#:
+pacman -S mono
+
+
+pour compiler un fichier .cs:
+
+-créer le fichier .cs (hello.cs pour l'exemple)
+-tapper la commande: mcs -out:hello.exe hello.cs
+-tapper la commande: mono hello.exe
+
+pour avoir un fichier .dll et combiner plusieurs .cs au main:
+
+-créer un nouveau fichier .cs (Library.cs pour l'exemple)
+-tapper la commande: mcs -t:library Library.cs, un fichier .dll vient alors
+d'être crée.
+-appeler la fonction Library.cs dans la fonction hello.cs qui est le main
+-tapper la commande mcs -r:Library.dll hello.cs
+-tapper la commande mono hello.cs
+
+Voir la video: https://www.youtube.com/watch?v=ndXFlvZw6Jk
+
+Et voilà!
