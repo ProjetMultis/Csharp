@@ -1,0 +1,18 @@
+Après avoir installer MonoDevelop:
+
+Un probleme survient lors de la création d'un projet, la fenêtre se 
+referme automatiquement après.
+
+Voici une solution pour ne plus rencontrer ce type de probleme:
+Tapper dans le terminal:
+
+1) cd /usr/lib
+2) find monodevelop | grep libgit2
+ (position ou se trouve le probleme, si il ne trouve pas, 
+ passer quand meme à l'étape 3)
+3) cd monodevelop/AddIns
+4) rm -Rf VersionControl
+
+Redemarrez MonoDevelop, creez un nouveau projet, et voilà, plus de 
+blème! 
+
